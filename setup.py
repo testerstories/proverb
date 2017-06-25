@@ -21,6 +21,12 @@ setup(
     author_email='jeffnyman@gmail.com',
     license='MIT',
     packages=['proverb'],
+    install_requires=['markdown'],
+    tests_require=['nose'],
+    test_suite='nose.collector',
+    entry_points = {
+        'console_scripts': ['proverb-saying=proverb.command_line:main'],
+    },
     include_package_data=True,
     zip_safe=False
 )
